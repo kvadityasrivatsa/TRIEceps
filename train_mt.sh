@@ -47,6 +47,7 @@ fairseq-train $predir \
     --max-tokens 256
 
 # fairseq-generate
+echo "Running inference"
 fairseq-generate $predir \
     --path $chkdir/checkpoint_5.pt \
-    --batch-size 128 --beam 5 > $evldir/'test_inference.txt'
+    --batch-size 64 --beam 5 > $evldir/'test_inference.txt'

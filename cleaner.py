@@ -17,7 +17,7 @@ def clean(line):
 text_hi = [clean(l) for l in read_txt(os.path.join(rawdir,'orig.hi'))[:nsample]]
 text_te = [clean(l) for l in read_txt(os.path.join(rawdir,'orig.te'))[:nsample]]
 
-text = zip(text_hi,text_te)
+text = list(zip(text_hi,text_te))
 train_text, aux_text = tts(text,test_size=0.2)
 test_text, valid_text = tts(aux_text,test_size=0.5)
 
