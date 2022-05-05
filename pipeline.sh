@@ -14,6 +14,7 @@ evldir=$datadir/'eval'; rm -rf $evldir
 python3 cleaner.py
 
 # tokenize.py
+python3 tokenize.py $model
 
 # train_mt.py
 bash train_mt.sh $model
