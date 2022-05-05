@@ -5,7 +5,7 @@ from utils import *
 #from tqdm import tqdm
 import sentencepiece as spm
 
-model = sys.argv[1].strip()
+model = str(sys.argv[1]).strip()
 
 rootdir='./data'
 rawdir=os.path.join(rootdir,'raw')
