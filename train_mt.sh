@@ -15,7 +15,7 @@ predir=$datadir/'preprocessed'
 chkdir=$datadir/'checkpoints'
 evldir=$datadir/'eval'
 
-max_epochs=3
+max_epochs=5
 
 # fairseq-preprocess
 fairseq-preprocess --source-lang hi --target-lang te \
