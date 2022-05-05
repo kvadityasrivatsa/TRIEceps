@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # wandb credentials
-!wandb login b8d75bf0df76638730fd957d848903e52b4713bc
+wandb login b8d75bf0df76638730fd957d848903e52b4713bc
 
 # tokenizer model
 model=$1
@@ -25,7 +25,7 @@ fairseq-preprocess --source-lang hi --target-lang te \
 fairseq-train $predir \
     --source-lang='hi' --target-lang='te' \
     --save-dir $chkdir \
-    # --wandb-project 'trieceps_train_mt' \
+    --wandb-project 'trieceps_train_mt' \
     --max-source-positions=210 \
     --max-target-positions=210 \
     --save-interval=1 \
@@ -43,7 +43,7 @@ fairseq-train $predir \
     --max-epoch 5 \
     --no-last-checkpoints \
     --skip-invalid-size-inputs-valid-test \
-    --distributed-world-size 4 \
+    --distributed-world-size 2 \
     --max-tokens 256
 
 # fairseq-generate
