@@ -17,7 +17,7 @@ def run_sentencepiece(lang,model_type,model_prefix):
 
     spm.SentencePieceTrainer.train(f'--input={clndir}/train.{lang} \
                                     --model_prefix={tokdir}/{model_prefix}.{lang} \
-                                    --vocab_size=2000 --model_type={model_type}')
+                                    --vocab_size=30000 --model_type={model_type}')
 
     sp = spm.SentencePieceProcessor()
     sp.load(f'{tokdir}/{model_prefix}.{lang}.model')
