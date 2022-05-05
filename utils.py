@@ -1,12 +1,12 @@
 import os
 import shutil
-from tqdm import tqdm
+#from tqdm import tqdm
 
 def read_txt(path):
     print(f'reading from {path}')
     data = []
     with open(path,'r') as f:
-        for l in tqdm(f):
+        for l in f:
             data.append(l.strip())
     print('read completed.\n')
     return data

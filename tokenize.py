@@ -2,7 +2,7 @@ import os
 import re
 import sys
 from utils import *
-from tqdm import tqdm
+#from tqdm import tqdm
 import sentencepiece as spm
 
 model = sys.argv[1].strip()
@@ -10,8 +10,8 @@ model = sys.argv[1].strip()
 rootdir='./data'
 rawdir=os.path.join(rootdir,'raw')
 clndir=os.path.join(rootdir,'cleaned')
-datadir=os.path.join=(rootdir,'models',model)
-tokdir=os.path.join=(datadir,'tokenized')
+datadir=os.path.join(rootdir,'models',model)
+tokdir=os.path.join(datadir,'tokenized')
 
 def run_sentencepiece(lang,model_type,model_prefix):
 
@@ -28,7 +28,7 @@ def run_sentencepiece(lang,model_type,model_prefix):
         fpath = os.path.join(clndir,f)
         text = read_txt(fpath)
         print(f'tokenizing {fpath}')
-        text = [' '.join(sp.encode_as_pieces(l)) for l in tqdm(text)]
+        text = [' '.join(sp.encode_as_pieces(l)) for l in text]
         tpath = os.path.join(tokdir,f)
         write_txt(text,tpath)
         print(f'tokenized. saving to {tpath}\n')
