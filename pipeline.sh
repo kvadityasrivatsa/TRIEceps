@@ -11,6 +11,7 @@ chkdir=$datadir/'checkpoints'; rm -rf $chkdir
 evldir=$datadir/'eval'; rm -rf $evldir
 
 # cleaner.py
+python3 cleaner.py
 
 # tokenize.py
 
