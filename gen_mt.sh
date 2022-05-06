@@ -17,5 +17,6 @@ evldir=$datadir/'eval'
 
 # fairseq-generate
 fairseq-generate $predir \
-    --path $chkdir/checkpoint_$chp.pt \
+    --path $chkdir/checkpoint$chp.pt \
+    --skip-invalid-size-inputs-valid-test \
     --batch-size 128 --beam 5 > $evldir/'test_inference_$chp.txt'
