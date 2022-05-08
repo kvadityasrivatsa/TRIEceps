@@ -25,5 +25,3 @@ $ bash train_mt.sh trieceps_candidacy
 The processed data, checkpoints, and test outputs will be saved at `./data/models/{model_type}/`
 ## Pretrained Models
 The pretrained checkpoints as well as the evaluation test output files can be found here.
-
-## License
