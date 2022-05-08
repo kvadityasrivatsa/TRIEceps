@@ -11,7 +11,7 @@ pip install --editable .
 Fetching the data
 ```
 $ cd TRIEceps/
-$ gdown LINK
+$ gdown https://drive.google.com/uc?id=1WHE0IgHm_oFNW3X1C_Ax0AeLozGPLREt
 $ unzip data.zip
 ```
 Training MT pipeline on SentencePiece Baseline
